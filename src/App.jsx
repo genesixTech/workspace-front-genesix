@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
-import Sidebar from './components/Sidebar'
+import LeftSidebar from './components/LeftSidebar'
 import RightSidebar from './components/RightSidebar'
 import Dashboard from './components/Dashboard'
 import Wizard from './components/Wizard.jsx'
@@ -87,7 +87,7 @@ function App() {
     <div className="flex h-screen bg-gray-50 text-gray-900">
       <Header onNavigate={handleNavigate} />
 
-      <Sidebar activeStep="discovery" onStepChange={handleNavigate} />
+      <LeftSidebar activeStep="discovery" onStepChange={handleNavigate} />
 
       <main className={`flex-1 overflow-auto pt-16 transition-all duration-300 ${isRightSidebarCollapsed ? 'mr-16' : 'mr-64'} ml-64`}>
         {activePage === 'dashboard' && <Dashboard onNavigate={handleNavigate} onOpenWizard={handleOpenWizard} />}

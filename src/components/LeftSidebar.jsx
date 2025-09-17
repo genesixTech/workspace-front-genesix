@@ -22,7 +22,8 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 
-const Sidebar = ({ activeStep, onStepChange }) => {
+// eslint-disable-next-line no-unused-vars
+const LeftSidebar = ({ activeStep, onStepChange }) => {
   const [collapsed, setCollapsed] = useState(false)
 
   const steps = [
@@ -262,4 +263,4 @@ const Sidebar = ({ activeStep, onStepChange }) => {
   )
 }
 
-export default Sidebar
+export default LeftSidebar

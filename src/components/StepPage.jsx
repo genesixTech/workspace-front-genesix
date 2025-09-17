@@ -128,23 +128,23 @@ const StepPage = ({ stepData, onAdvanceStep }) => {
               <CardTitle className="text-lg font-semibold">Conversa com a IA</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col h-[400px]">
-              <div className="flex-1 overflow-y-auto space-y-4 mb-4 p-2 border rounded-md bg-gray-50">
+              <div className="flex-1 overflow-y-auto space-y-4 mb-4 p-5 border rounded-md bg-gray-50">
                 {messages.map((msg) => (
                   <div
                     key={msg.id}
                     className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`flex items-start space-x-2 max-w-[80%] ${msg.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
+                      className={`flex items-start space-x-3 max-w-[80%] ${msg.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
                     >
-                      <div className={`w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold ${
-                        msg.sender === 'user' ? 'bg-blue-500' : 'bg-purple-500'
-                      }`}>
-                        {msg.sender === 'user' ? 'VC' : 'IA'}
+                      <div   className={`w-10 h-10 rounded-full flex items-center justify-center 
+                    text-white font-bold text-xs leading-none flex-shrink-0
+                      ${msg.sender === "user" ? "bg-blue-500" : "bg-purple-500"}`}>
+                        {msg.sender === 'user' ? 'Você' : 'IA'}
                       </div>
-                      <div className={`p-2 rounded-lg shadow-sm ${msg.sender === 'user' ? 'bg-blue-50 text-blue-900' : 'bg-gray-100 text-gray-800'}`}>
+                      <div className={`p-2 rounded-lg shadow-sm ${msg.sender === 'user' ? 'bg-blue-100 text-gray-800' : 'bg-gray-100 text-gray-800'}`}>
                         <p className="text-sm whitespace-pre-wrap">{msg.text}</p>
-                        <span className="text-xs text-gray-500 block mt-1 text-right">
+                        <span className="text-xs text-gray-500 block mt-2.5 text-right">
                           {msg.timestamp}
                         </span>
                       </div>
