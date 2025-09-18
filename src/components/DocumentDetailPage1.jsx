@@ -1,8 +1,27 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { ArrowLeft, FileText, Download, Eye, Edit, Share2, Clock, User, Target, BarChart3, Users, TrendingUp } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import {
+  ArrowLeft,
+  FileText,
+  Download,
+  Eye,
+  Edit,
+  Share2,
+  Clock,
+  User,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+} from "lucide-react";
 
 const DocumentDetailPage1 = ({ onBack }) => {
   const [selectedDocument, setSelectedDocument] = useState(null);
@@ -15,22 +34,24 @@ const DocumentDetailPage1 = ({ onBack }) => {
       size: "2.4 MB",
       lastModified: "2 dias atrás",
       author: "Maria Silva",
-      description: "Análise completa do mercado atual, incluindo tamanho, segmentação e oportunidades de crescimento.",
+      description:
+        "Análise completa do mercado atual, incluindo tamanho, segmentação e oportunidades de crescimento.",
       content: {
-        summary: "Este documento apresenta uma análise abrangente do mercado-alvo, identificando oportunidades e desafios para o desenvolvimento do produto.",
+        summary:
+          "Este documento apresenta uma análise abrangente do mercado-alvo, identificando oportunidades e desafios para o desenvolvimento do produto.",
         keyFindings: [
           "Mercado em crescimento de 15% ao ano",
           "Segmento premium com menor concorrência",
           "Demanda crescente por soluções digitais",
-          "Oportunidade de first-mover advantage"
+          "Oportunidade de first-mover advantage",
         ],
         sections: [
           { title: "Tamanho do Mercado", pages: "1-5" },
           { title: "Análise Competitiva", pages: "6-12" },
           { title: "Segmentação", pages: "13-18" },
-          { title: "Oportunidades", pages: "19-24" }
-        ]
-      }
+          { title: "Oportunidades", pages: "19-24" },
+        ],
+      },
     },
     {
       id: 2,
@@ -39,22 +60,24 @@ const DocumentDetailPage1 = ({ onBack }) => {
       size: "1.8 MB",
       lastModified: "3 dias atrás",
       author: "João Santos",
-      description: "Definição detalhada das personas principais do produto, incluindo características, necessidades e comportamentos.",
+      description:
+        "Definição detalhada das personas principais do produto, incluindo características, necessidades e comportamentos.",
       content: {
-        summary: "Documento que define as três personas principais do produto, baseado em pesquisa qualitativa e quantitativa com usuários potenciais.",
+        summary:
+          "Documento que define as três personas principais do produto, baseado em pesquisa qualitativa e quantitativa com usuários potenciais.",
         keyFindings: [
           "3 personas principais identificadas",
           "Faixa etária entre 25-45 anos",
           "Alto uso de tecnologia móvel",
-          "Valorizam eficiência e praticidade"
+          "Valorizam eficiência e praticidade",
         ],
         sections: [
           { title: "Metodologia de Pesquisa", pages: "1-3" },
           { title: "Persona 1: O Profissional Ocupado", pages: "4-7" },
           { title: "Persona 2: O Empreendedor Digital", pages: "8-11" },
-          { title: "Persona 3: O Gestor Estratégico", pages: "12-15" }
-        ]
-      }
+          { title: "Persona 3: O Gestor Estratégico", pages: "12-15" },
+        ],
+      },
     },
     {
       id: 3,
@@ -63,23 +86,25 @@ const DocumentDetailPage1 = ({ onBack }) => {
       size: "3.2 MB",
       lastModified: "1 dia atrás",
       author: "Ana Costa",
-      description: "Mapeamento completo da jornada do usuário, desde a descoberta até a retenção do produto.",
+      description:
+        "Mapeamento completo da jornada do usuário, desde a descoberta até a retenção do produto.",
       content: {
-        summary: "Visualização detalhada da jornada do usuário em todas as etapas de interação com o produto, identificando pontos de dor e oportunidades.",
+        summary:
+          "Visualização detalhada da jornada do usuário em todas as etapas de interação com o produto, identificando pontos de dor e oportunidades.",
         keyFindings: [
           "7 etapas principais na jornada",
           "3 pontos críticos de abandono",
           "Oportunidades de melhoria na onboarding",
-          "Alto potencial de retenção pós-primeiro uso"
+          "Alto potencial de retenção pós-primeiro uso",
         ],
         sections: [
           { title: "Descoberta e Awareness", pages: "1-4" },
           { title: "Consideração e Avaliação", pages: "5-8" },
           { title: "Onboarding e Primeiro Uso", pages: "9-12" },
-          { title: "Uso Recorrente e Retenção", pages: "13-16" }
-        ]
-      }
-    }
+          { title: "Uso Recorrente e Retenção", pages: "13-16" },
+        ],
+      },
+    },
   ];
 
   const handleDocumentClick = (doc) => {
@@ -101,7 +126,9 @@ const DocumentDetailPage1 = ({ onBack }) => {
               Voltar à Lista
             </Button>
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">{selectedDocument.name}</h1>
+              <h1 className="text-2xl font-bold text-gray-800">
+                {selectedDocument.name}
+              </h1>
               <p className="text-gray-600">{selectedDocument.description}</p>
             </div>
           </div>
@@ -151,7 +178,9 @@ const DocumentDetailPage1 = ({ onBack }) => {
                 <Clock className="w-5 h-5 text-yellow-600" />
                 <div>
                   <p className="text-sm text-gray-600">Modificado</p>
-                  <p className="font-semibold">{selectedDocument.lastModified}</p>
+                  <p className="font-semibold">
+                    {selectedDocument.lastModified}
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -187,7 +216,10 @@ const DocumentDetailPage1 = ({ onBack }) => {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {selectedDocument.content.keyFindings.map((finding, index) => (
-                <div key={index} className="flex items-center gap-2 p-3 bg-blue-50 rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-center gap-2 p-3 bg-blue-50 rounded-lg"
+                >
                   <TrendingUp className="w-4 h-4 text-blue-600 flex-shrink-0" />
                   <span className="text-sm text-blue-800">{finding}</span>
                 </div>
@@ -204,7 +236,10 @@ const DocumentDetailPage1 = ({ onBack }) => {
           <CardContent>
             <div className="space-y-3">
               {selectedDocument.content.sections.map((section, index) => (
-                <div key={index} className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50">
+                <div
+                  key={index}
+                  className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50"
+                >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
@@ -235,7 +270,8 @@ const DocumentDetailPage1 = ({ onBack }) => {
               Definição do Problema
             </h1>
             <p className="text-gray-600 mt-1">
-              Documentos relacionados à identificação e definição do problema central
+              Documentos relacionados à identificação e definição do problema
+              central
             </p>
           </div>
         </div>
@@ -248,8 +284,8 @@ const DocumentDetailPage1 = ({ onBack }) => {
       {/* Lista de Documentos */}
       <div className="grid grid-cols-1 gap-4">
         {documents.map((doc) => (
-          <Card 
-            key={doc.id} 
+          <Card
+            key={doc.id}
             className="cursor-pointer transition-all duration-200 hover:shadow-lg hover:border-purple-300"
             onClick={() => handleDocumentClick(doc)}
           >
@@ -260,8 +296,12 @@ const DocumentDetailPage1 = ({ onBack }) => {
                     <FileText className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">{doc.name}</h3>
-                    <p className="text-gray-600 text-sm mb-3">{doc.description}</p>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                      {doc.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-3">
+                      {doc.description}
+                    </p>
                     <div className="flex items-center gap-4 text-sm text-gray-500">
                       <span className="flex items-center gap-1">
                         <User className="w-4 h-4" />
@@ -294,4 +334,3 @@ const DocumentDetailPage1 = ({ onBack }) => {
 };
 
 export default DocumentDetailPage1;
-

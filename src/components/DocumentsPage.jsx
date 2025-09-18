@@ -1,8 +1,32 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { FileText, Search, Filter, ArrowRight, Zap, Users, Target, Lightbulb, BarChart3, Palette, Code, TestTube, Rocket, TrendingUp, Shield, CheckCircle, Star } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import {
+  FileText,
+  Search,
+  Filter,
+  ArrowRight,
+  Zap,
+  Users,
+  Target,
+  Lightbulb,
+  BarChart3,
+  Palette,
+  Code,
+  TestTube,
+  Rocket,
+  TrendingUp,
+  Shield,
+  CheckCircle,
+  Star,
+} from "lucide-react";
 
 const DocumentsPage = () => {
   const [selectedStep, setSelectedStep] = useState(null);
@@ -17,10 +41,25 @@ const DocumentsPage = () => {
       color: "from-blue-500 to-purple-600",
       documentCount: 3,
       documents: [
-        { name: "Análise de Mercado", type: "PDF", size: "2.4 MB", lastModified: "2 dias atrás" },
-        { name: "Personas de Usuário", type: "DOCX", size: "1.8 MB", lastModified: "3 dias atrás" },
-        { name: "Mapa de Jornada", type: "PDF", size: "3.2 MB", lastModified: "1 dia atrás" }
-      ]
+        {
+          name: "Análise de Mercado",
+          type: "PDF",
+          size: "2.4 MB",
+          lastModified: "2 dias atrás",
+        },
+        {
+          name: "Personas de Usuário",
+          type: "DOCX",
+          size: "1.8 MB",
+          lastModified: "3 dias atrás",
+        },
+        {
+          name: "Mapa de Jornada",
+          type: "PDF",
+          size: "3.2 MB",
+          lastModified: "1 dia atrás",
+        },
+      ],
     },
     {
       id: 2,
@@ -29,11 +68,31 @@ const DocumentsPage = () => {
       color: "from-green-500 to-teal-600",
       documentCount: 4,
       documents: [
-        { name: "Relatório de Concorrência", type: "PDF", size: "4.1 MB", lastModified: "1 dia atrás" },
-        { name: "Análise SWOT", type: "DOCX", size: "1.2 MB", lastModified: "2 dias atrás" },
-        { name: "Pesquisa de Tendências", type: "PDF", size: "2.8 MB", lastModified: "3 dias atrás" },
-        { name: "Dados de Mercado", type: "XLSX", size: "5.6 MB", lastModified: "1 dia atrás" }
-      ]
+        {
+          name: "Relatório de Concorrência",
+          type: "PDF",
+          size: "4.1 MB",
+          lastModified: "1 dia atrás",
+        },
+        {
+          name: "Análise SWOT",
+          type: "DOCX",
+          size: "1.2 MB",
+          lastModified: "2 dias atrás",
+        },
+        {
+          name: "Pesquisa de Tendências",
+          type: "PDF",
+          size: "2.8 MB",
+          lastModified: "3 dias atrás",
+        },
+        {
+          name: "Dados de Mercado",
+          type: "XLSX",
+          size: "5.6 MB",
+          lastModified: "1 dia atrás",
+        },
+      ],
     },
     {
       id: 3,
@@ -42,12 +101,37 @@ const DocumentsPage = () => {
       color: "from-yellow-500 to-orange-600",
       documentCount: 5,
       documents: [
-        { name: "Brainstorming Session", type: "PDF", size: "1.9 MB", lastModified: "2 dias atrás" },
-        { name: "Matriz de Ideias", type: "XLSX", size: "2.3 MB", lastModified: "1 dia atrás" },
-        { name: "Concept Map", type: "PNG", size: "4.2 MB", lastModified: "3 dias atrás" },
-        { name: "Feature List", type: "DOCX", size: "1.1 MB", lastModified: "1 dia atrás" },
-        { name: "User Stories", type: "PDF", size: "2.7 MB", lastModified: "2 dias atrás" }
-      ]
+        {
+          name: "Brainstorming Session",
+          type: "PDF",
+          size: "1.9 MB",
+          lastModified: "2 dias atrás",
+        },
+        {
+          name: "Matriz de Ideias",
+          type: "XLSX",
+          size: "2.3 MB",
+          lastModified: "1 dia atrás",
+        },
+        {
+          name: "Concept Map",
+          type: "PNG",
+          size: "4.2 MB",
+          lastModified: "3 dias atrás",
+        },
+        {
+          name: "Feature List",
+          type: "DOCX",
+          size: "1.1 MB",
+          lastModified: "1 dia atrás",
+        },
+        {
+          name: "User Stories",
+          type: "PDF",
+          size: "2.7 MB",
+          lastModified: "2 dias atrás",
+        },
+      ],
     },
     {
       id: 4,
@@ -55,7 +139,7 @@ const DocumentsPage = () => {
       icon: CheckCircle,
       color: "from-purple-500 to-pink-600",
       documentCount: 2,
-      documents: []
+      documents: [],
     },
     {
       id: 5,
@@ -63,7 +147,7 @@ const DocumentsPage = () => {
       icon: Palette,
       color: "from-pink-500 to-red-600",
       documentCount: 1,
-      documents: []
+      documents: [],
     },
     {
       id: 6,
@@ -71,7 +155,7 @@ const DocumentsPage = () => {
       icon: Palette,
       color: "from-indigo-500 to-blue-600",
       documentCount: 3,
-      documents: []
+      documents: [],
     },
     {
       id: 7,
@@ -79,7 +163,7 @@ const DocumentsPage = () => {
       icon: Code,
       color: "from-teal-500 to-green-600",
       documentCount: 0,
-      documents: []
+      documents: [],
     },
     {
       id: 8,
@@ -87,7 +171,7 @@ const DocumentsPage = () => {
       icon: TestTube,
       color: "from-orange-500 to-yellow-600",
       documentCount: 2,
-      documents: []
+      documents: [],
     },
     {
       id: 9,
@@ -95,7 +179,7 @@ const DocumentsPage = () => {
       icon: Rocket,
       color: "from-red-500 to-pink-600",
       documentCount: 1,
-      documents: []
+      documents: [],
     },
     {
       id: 10,
@@ -103,7 +187,7 @@ const DocumentsPage = () => {
       icon: TrendingUp,
       color: "from-blue-500 to-indigo-600",
       documentCount: 4,
-      documents: []
+      documents: [],
     },
     {
       id: 11,
@@ -111,7 +195,7 @@ const DocumentsPage = () => {
       icon: Star,
       color: "from-green-500 to-blue-600",
       documentCount: 2,
-      documents: []
+      documents: [],
     },
     {
       id: 12,
@@ -119,7 +203,7 @@ const DocumentsPage = () => {
       icon: Shield,
       color: "from-purple-500 to-indigo-600",
       documentCount: 1,
-      documents: []
+      documents: [],
     },
     {
       id: 13,
@@ -127,18 +211,21 @@ const DocumentsPage = () => {
       icon: BarChart3,
       color: "from-teal-500 to-purple-600",
       documentCount: 0,
-      documents: []
-    }
+      documents: [],
+    },
   ];
 
-  const totalDocuments = documentSteps.reduce((sum, step) => sum + step.documentCount, 0);
+  const totalDocuments = documentSteps.reduce(
+    (sum, step) => sum + step.documentCount,
+    0,
+  );
 
   const handleStepClick = (stepId) => {
     if (stepId <= 3) {
       // Para as primeiras 3 etapas, navegar para página detalhada
-      if (stepId === 1) window.location.hash = '#documents-step-1';
-      if (stepId === 2) window.location.hash = '#documents-step-2';
-      if (stepId === 3) window.location.hash = '#documents-step-3';
+      if (stepId === 1) window.location.hash = "#documents-step-1";
+      if (stepId === 2) window.location.hash = "#documents-step-2";
+      if (stepId === 3) window.location.hash = "#documents-step-3";
     } else {
       setSelectedStep(stepId);
     }
@@ -153,7 +240,8 @@ const DocumentsPage = () => {
             Documentos do Projeto
           </h1>
           <p className="text-gray-600 mt-1">
-            Gerencie e visualize todos os documentos criados durante o desenvolvimento do produto
+            Gerencie e visualize todos os documentos criados durante o
+            desenvolvimento do produto
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -180,7 +268,8 @@ const DocumentsPage = () => {
               Wizard de Referência Cruzada
             </CardTitle>
             <CardDescription>
-              Encontre conexões e dependências entre documentos de diferentes etapas
+              Encontre conexões e dependências entre documentos de diferentes
+              etapas
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -189,8 +278,10 @@ const DocumentsPage = () => {
                 <label className="text-sm font-medium">Etapa de Origem</label>
                 <select className="w-full p-2 border rounded-lg">
                   <option>Selecione uma etapa...</option>
-                  {documentSteps.map(step => (
-                    <option key={step.id} value={step.id}>{step.title}</option>
+                  {documentSteps.map((step) => (
+                    <option key={step.id} value={step.id}>
+                      {step.title}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -198,8 +289,10 @@ const DocumentsPage = () => {
                 <label className="text-sm font-medium">Etapa de Destino</label>
                 <select className="w-full p-2 border rounded-lg">
                   <option>Selecione uma etapa...</option>
-                  {documentSteps.map(step => (
-                    <option key={step.id} value={step.id}>{step.title}</option>
+                  {documentSteps.map((step) => (
+                    <option key={step.id} value={step.id}>
+                      {step.title}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -226,10 +319,12 @@ const DocumentsPage = () => {
             >
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <div className={`p-2 rounded-lg bg-gradient-to-r ${step.color}`}>
+                  <div
+                    className={`p-2 rounded-lg bg-gradient-to-r ${step.color}`}
+                  >
                     <IconComponent className="w-5 h-5 text-white" />
                   </div>
-                  <Badge 
+                  <Badge
                     variant={step.documentCount > 0 ? "default" : "secondary"}
                     className="text-xs"
                   >
@@ -243,10 +338,9 @@ const DocumentsPage = () => {
               <CardContent className="pt-0">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-500">
-                    {step.documentCount === 0 
-                      ? "Nenhum documento" 
-                      : `${step.documentCount} documento${step.documentCount !== 1 ? 's' : ''}`
-                    }
+                    {step.documentCount === 0
+                      ? "Nenhum documento"
+                      : `${step.documentCount} documento${step.documentCount !== 1 ? "s" : ""}`}
                   </span>
                   {step.id <= 3 && (
                     <ArrowRight className="w-4 h-4 text-purple-500" />
@@ -254,9 +348,11 @@ const DocumentsPage = () => {
                 </div>
                 {step.documentCount > 0 && (
                   <div className="mt-2 w-full bg-gray-200 rounded-full h-1">
-                    <div 
+                    <div
                       className={`h-1 rounded-full bg-gradient-to-r ${step.color}`}
-                      style={{ width: `${Math.min(100, (step.documentCount / 5) * 100)}%` }}
+                      style={{
+                        width: `${Math.min(100, (step.documentCount / 5) * 100)}%`,
+                      }}
                     ></div>
                   </div>
                 )}
@@ -273,27 +369,32 @@ const DocumentsPage = () => {
             <div className="flex items-center gap-3">
               <FileText className="w-8 h-8 text-blue-600" />
               <div>
-                <p className="text-2xl font-bold text-blue-700">{totalDocuments}</p>
+                <p className="text-2xl font-bold text-blue-700">
+                  {totalDocuments}
+                </p>
                 <p className="text-sm text-blue-600">Total de Documentos</p>
               </div>
             </div>
           </CardContent>
         </Card>
-        
+
         <Card className="bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
               <CheckCircle className="w-8 h-8 text-green-600" />
               <div>
                 <p className="text-2xl font-bold text-green-700">
-                  {documentSteps.filter(step => step.documentCount > 0).length}
+                  {
+                    documentSteps.filter((step) => step.documentCount > 0)
+                      .length
+                  }
                 </p>
                 <p className="text-sm text-green-600">Etapas com Documentos</p>
               </div>
             </div>
           </CardContent>
         </Card>
-        
+
         <Card className="bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-200">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
@@ -305,7 +406,7 @@ const DocumentsPage = () => {
             </div>
           </CardContent>
         </Card>
-        
+
         <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
@@ -323,4 +424,3 @@ const DocumentsPage = () => {
 };
 
 export default DocumentsPage;
-

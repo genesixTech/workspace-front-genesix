@@ -1,22 +1,19 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Bell,
-  Search,
-  Settings,
-  User
-} from 'lucide-react'
-import { useState } from 'react'
-import logo from "../assets/Genesix-logo.png"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Bell, Search, Settings, User } from "lucide-react";
+import { useState } from "react";
+import logo from "../assets/Genesix-logo.png";
 
 const Header = ({ onNavigate }) => {
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const basic = "text-base font-medium size rounded-none pb-1 hover:text-blue-500 hover:bg-transparent"
+  const basic =
+    "text-base font-medium size rounded-none pb-1 hover:text-blue-500 hover:bg-transparent";
 
-  const active = "text-base font-medium size rounded-none pb-1 text-blue-500 bg-transparent border-b-2 border-blue-500"
+  const active =
+    "text-base font-medium size rounded-none pb-1 text-blue-500 bg-transparent border-b-2 border-blue-500";
 
-  const [selected, setSelected] = useState("dashboard")
+  const [selected, setSelected] = useState("dashboard");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
@@ -28,7 +25,9 @@ const Header = ({ onNavigate }) => {
           </div>
           <div>
             <h1 className="text-xl font-bold text-gray-900">GenesiX</h1>
-            <p className="text-xs text-gray-500">Plataforma de Criação de Produtos</p>
+            <p className="text-xs text-gray-500">
+              Plataforma de Criação de Produtos
+            </p>
           </div>
         </div>
 
@@ -36,28 +35,40 @@ const Header = ({ onNavigate }) => {
         <nav className="flex items-center space-x-4">
           <Button
             variant="ghost"
-            onClick={() => { setSelected("dashboard"); onNavigate?.('dashboard'); }}
+            onClick={() => {
+              setSelected("dashboard");
+              onNavigate?.("dashboard");
+            }}
             className={selected === "dashboard" ? active : basic}
           >
             Dashboard
           </Button>
           <Button
             variant="ghost"
-            onClick={() => { setSelected("documents"); onNavigate?.('documents'); }}
+            onClick={() => {
+              setSelected("documents");
+              onNavigate?.("documents");
+            }}
             className={selected === "documents" ? active : basic}
           >
             Documentos
           </Button>
           <Button
             variant="ghost"
-            onClick={() => { setSelected("collaboration"); onNavigate?.('collaboration'); }}
+            onClick={() => {
+              setSelected("collaboration");
+              onNavigate?.("collaboration");
+            }}
             className={selected === "collaboration" ? active : basic}
           >
             Colaboração
           </Button>
           <Button
             variant="ghost"
-            onClick={() => { setSelected("analytics"); onNavigate?.('analytics');}}
+            onClick={() => {
+              setSelected("analytics");
+              onNavigate?.("analytics");
+            }}
             className={selected === "analytics" ? active : basic}
           >
             Analytics
@@ -79,21 +90,33 @@ const Header = ({ onNavigate }) => {
           </div>
 
           {/* Botões de Ação */}
-          <Button variant="ghost" size="sm" className="text-gray-500 hover:text-gray-700 p-1">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-gray-500 hover:text-gray-700 p-1"
+          >
             <Bell style={{ width: "20px", height: "20px" }} />
           </Button>
-          
-          <Button variant="ghost" size="sm" className="text-gray-500 hover:text-gray-700 p-1">
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-gray-500 hover:text-gray-700 p-1"
+          >
             <Settings style={{ width: "20px", height: "20px" }} />
           </Button>
-          
-          <Button variant="ghost" size="sm" className="text-gray-500 hover:text-gray-700 p-1">
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-gray-500 hover:text-gray-700 p-1"
+          >
             <User style={{ width: "20px", height: "20px" }} />
           </Button>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
