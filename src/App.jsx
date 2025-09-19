@@ -11,6 +11,7 @@ import DocumentDetailPage1 from "./components/DocumentDetailPage1";
 import DocumentDetailPage2 from "./components/DocumentDetailPage2";
 import DocumentDetailPage3 from "./components/DocumentDetailPage3";
 import CollaboratorsPage from "./components/CollaboratorsPage";
+import AnalyticsPage from "./components/AnalyticsPage";
 
 const stepData = {
   "contexto-problema": {
@@ -113,6 +114,7 @@ function App() {
           <DocumentDetailPage3 onBack={() => handleNavigate("documents")} />
         )}
         {activePage === "collaboration" && <CollaboratorsPage />}
+        {activePage === "analytics" && <AnalyticsPage />}
         {activePage === "contexto-problema" && (
           <StepPage
             stepData={stepData["contexto-problema"]}
