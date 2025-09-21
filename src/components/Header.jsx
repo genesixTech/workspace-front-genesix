@@ -110,6 +110,7 @@ const Header = ({ onNavigate }) => {
             variant="ghost"
             size="sm"
             className="text-gray-500 hover:text-gray-700 p-1"
+            onClick={() => onNavigate?.("profile")}
           >
             <User style={{ width: "20px", height: "20px" }} />
           </Button>

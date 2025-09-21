@@ -12,6 +12,7 @@ import DocumentDetailPage2 from "./components/DocumentDetailPage2";
 import DocumentDetailPage3 from "./components/DocumentDetailPage3";
 import CollaboratorsPage from "./components/CollaboratorsPage";
 import AnalyticsPage from "./components/AnalyticsPage";
+import UserProfilePage from "./components/UserProfilePage";
 
 const stepData = {
   "contexto-problema": {
@@ -115,6 +116,7 @@ function App() {
         )}
         {activePage === "collaboration" && <CollaboratorsPage />}
         {activePage === "analytics" && <AnalyticsPage />}
+        {activePage === "profile" && <UserProfilePage />}
         {activePage === "contexto-problema" && (
           <StepPage
             stepData={stepData["contexto-problema"]}
