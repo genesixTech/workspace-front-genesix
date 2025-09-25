@@ -14,6 +14,7 @@ import CollaboratorsPage from "./components/CollaboratorsPage";
 import AnalyticsPage from "./components/AnalyticsPage";
 import UserProfilePage from "./components/UserProfilePage";
 import NotificationOverlay from "./components/NotificationOverlay";
+import SettingsPage from "./components/SettingsPage";
 
 const stepData = {
   "contexto-problema": {
@@ -90,7 +91,7 @@ function App() {
     setIsWizardOpen(false);
   };
 
-    const handleOpenNotification = () => {
+  const handleOpenNotification = () => {
     setIsNotificationOpen(true);
   };
 
@@ -100,11 +101,19 @@ function App() {
 
   return (
     <div className="flex h-screen bg-gray-50 text-gray-900">
-      <Header onNavigate={handleNavigate} onOpenNotification={handleOpenNotification}/>
+      <Header
+        onNavigate={handleNavigate}
+        onOpenNotification={handleOpenNotification}
+      />
 
       <LeftSidebar activeStep="discovery" onStepChange={handleNavigate} />
 
-      {isNotificationOpen && <NotificationOverlay isOpen={handleOpenNotification} onClose={handleCloseNotification}/>}
+      {isNotificationOpen && (
+        <NotificationOverlay
+          isOpen={handleOpenNotification}
+          onClose={handleCloseNotification}
+        />
+      )}
 
       <main
         className={`flex-1 overflow-auto pt-16 transition-all duration-300 ${isRightSidebarCollapsed ? "mr-16" : "mr-64"} ml-64`}
@@ -128,6 +137,7 @@ function App() {
         {activePage === "collaboration" && <CollaboratorsPage />}
         {activePage === "analytics" && <AnalyticsPage />}
         {activePage === "profile" && <UserProfilePage />}
+        {activePage === "settings" && <SettingsPage />}
         {activePage === "contexto-problema" && (
           <StepPage
             stepData={stepData["contexto-problema"]}
