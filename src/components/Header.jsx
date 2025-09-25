@@ -4,7 +4,7 @@ import { Bell, Search, Settings, User } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/Genesix-logo.png";
 
-const Header = ({ onNavigate }) => {
+const Header = ({ onNavigate, onOpenNotification }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const basic =
@@ -94,6 +94,7 @@ const Header = ({ onNavigate }) => {
             variant="ghost"
             size="sm"
             className="text-gray-500 hover:text-gray-700 p-1"
+            onClick={onOpenNotification}
           >
             <Bell style={{ width: "20px", height: "20px" }} />
           </Button>

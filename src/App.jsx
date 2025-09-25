@@ -13,6 +13,7 @@ import DocumentDetailPage3 from "./components/DocumentDetailPage3";
 import CollaboratorsPage from "./components/CollaboratorsPage";
 import AnalyticsPage from "./components/AnalyticsPage";
 import UserProfilePage from "./components/UserProfilePage";
+import NotificationOverlay from "./components/NotificationOverlay";
 
 const stepData = {
   "contexto-problema": {
@@ -51,7 +52,7 @@ function App() {
   const [activePage, setActivePage] = useState("dashboard");
   const [isRightSidebarCollapsed, setIsRightSidebarCollapsed] = useState(false);
   const [isWizardOpen, setIsWizardOpen] = useState(false);
-
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   // Hash routing
   useEffect(() => {
     const handleHashChange = () => {
@@ -89,11 +90,21 @@ function App() {
     setIsWizardOpen(false);
   };
 
+    const handleOpenNotification = () => {
+    setIsNotificationOpen(true);
+  };
+
+  const handleCloseNotification = () => {
+    setIsNotificationOpen(false);
+  };
+
   return (
     <div className="flex h-screen bg-gray-50 text-gray-900">
-      <Header onNavigate={handleNavigate} />
+      <Header onNavigate={handleNavigate} onOpenNotification={handleOpenNotification}/>
 
       <LeftSidebar activeStep="discovery" onStepChange={handleNavigate} />
+
+      {isNotificationOpen && <NotificationOverlay isOpen={handleOpenNotification} onClose={handleCloseNotification}/>}
 
       <main
         className={`flex-1 overflow-auto pt-16 transition-all duration-300 ${isRightSidebarCollapsed ? "mr-16" : "mr-64"} ml-64`}
@@ -129,14 +140,12 @@ function App() {
             onAdvanceStep={() => handleNavigate("swot-csd")}
           />
         )}
-        {/* Outras páginas podem ser adicionadas aqui */}
       </main>
 
       <RightSidebar
         collapsed={isRightSidebarCollapsed}
         onToggle={handleToggleRightSidebar}
       />
-
       {isWizardOpen && <Wizard onClose={handleCloseWizard} />}
     </div>
   );
