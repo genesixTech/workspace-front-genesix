@@ -73,9 +73,9 @@ const Dashboard = ({ onNavigate, onOpenWizard }) => {
     },
     {
       id: "discovery",
-      title: "Discovery",
+      title: "Analisando o Mercado",
       description:
-        "Exploração do problema e levantamento de hipóteses iniciais",
+        "Exploração do problema, análise do mercado e tendências, benchmarks",
       icon: Lightbulb,
       status: "in-progress",
       progress: 65,
@@ -248,11 +248,11 @@ const Dashboard = ({ onNavigate, onOpenWizard }) => {
     <div className="flex-1 p-4">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h1 className="text-xl font-bold text-gray-900">
-            Dashboard do Projeto
+          <h1 className="text-xl font-bold bg-gradient-to-r from-[#1d5cfb] via-[#807ffb] to-[#5b54fb] bg-clip-text text-transparent">
+            Dashboard
           </h1>
           <p className="text-sm text-gray-600">
-            Acompanhe o progresso do seu projeto de IA
+            Acompanhe o progresso do seu projeto
           </p>
         </div>
         <div className="flex space-x-2">
@@ -261,7 +261,7 @@ const Dashboard = ({ onNavigate, onOpenWizard }) => {
             onClick={onOpenWizard}
           >
             <Wand2 className="w-4 h-4 mr-2" />
-            Novo Wizard
+            Novo Tarefa
           </Button>
           <Button
             className="bg-blue-600 text-white shadow-lg hover:bg-blue-700 h-9 px-4 text-sm"

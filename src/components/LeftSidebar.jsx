@@ -267,33 +267,10 @@ const LeftSidebar = ({ activeStep, onStepChange }) => {
           <div className="p-3 border-t border-gray-100">
             <Button
               variant="ghost"
-              onClick={() => onStepChange?.("documents")}
-              className="w-full justify-start text-gray-600 hover:text-gray-900 text-sm"
-            >
-              <FileText className="w-3.5 h-3.5 mr-2" />
-              Documentos
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => onStepChange?.("collaborators")}
-              className="w-full justify-start text-gray-600 hover:text-gray-900 text-sm"
-            >
-              <Users className="w-3.5 h-3.5 mr-2" />
-              Colaboradores
-            </Button>
-            <Button
-              variant="ghost"
               className="w-full justify-start text-gray-600 hover:text-gray-900 text-sm"
             >
               <BookOpen className="w-3.5 h-3.5 mr-2" />
               Documentação
-            </Button>
-            <Button
-              variant="ghost"
-              className="w-full justify-start text-gray-600 hover:text-gray-900 mt-1 text-sm"
-            >
-              <Settings className="w-3.5 h-3.5 mr-2" />
-              Configurações
             </Button>
           </div>
         )}

@@ -63,7 +63,7 @@ const DocumentsPage = () => {
     },
     {
       id: 2,
-      title: "Pesquisa de Mercado",
+      title: "Mercado",
       icon: BarChart3,
       color: "from-green-500 to-teal-600",
       documentCount: 4,
@@ -135,7 +135,7 @@ const DocumentsPage = () => {
     },
     {
       id: 4,
-      title: "Validação de Conceito",
+      title: "Pesquisa e Validações",
       icon: CheckCircle,
       color: "from-purple-500 to-pink-600",
       documentCount: 2,
@@ -143,7 +143,7 @@ const DocumentsPage = () => {
     },
     {
       id: 5,
-      title: "Prototipagem",
+      title: "Features, Maps e Flows",
       icon: Palette,
       color: "from-pink-500 to-red-600",
       documentCount: 1,
@@ -151,7 +151,7 @@ const DocumentsPage = () => {
     },
     {
       id: 6,
-      title: "Design de Interface",
+      title: "Prototipagem",
       icon: Palette,
       color: "from-indigo-500 to-blue-600",
       documentCount: 3,
@@ -159,7 +159,7 @@ const DocumentsPage = () => {
     },
     {
       id: 7,
-      title: "Desenvolvimento",
+      title: "PRD",
       icon: Code,
       color: "from-teal-500 to-green-600",
       documentCount: 0,
@@ -179,38 +179,6 @@ const DocumentsPage = () => {
       icon: Rocket,
       color: "from-red-500 to-pink-600",
       documentCount: 1,
-      documents: [],
-    },
-    {
-      id: 10,
-      title: "Marketing",
-      icon: TrendingUp,
-      color: "from-blue-500 to-indigo-600",
-      documentCount: 4,
-      documents: [],
-    },
-    {
-      id: 11,
-      title: "Vendas",
-      icon: Star,
-      color: "from-green-500 to-blue-600",
-      documentCount: 2,
-      documents: [],
-    },
-    {
-      id: 12,
-      title: "Suporte",
-      icon: Shield,
-      color: "from-purple-500 to-indigo-600",
-      documentCount: 1,
-      documents: [],
-    },
-    {
-      id: 13,
-      title: "Análise de Resultados",
-      icon: BarChart3,
-      color: "from-teal-500 to-purple-600",
-      documentCount: 0,
       documents: [],
     },
   ];
